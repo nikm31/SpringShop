@@ -1,5 +1,6 @@
 package ru.geekbrains.springdata.entity.users;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -27,6 +28,9 @@ public class User {
 
 	@Column(name = "password")
 	private String password;
+
+	@Transient
+	private String passwordConfirmation;
 
 	@Column(name = "email")
 	private String email;
