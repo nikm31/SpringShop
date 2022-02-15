@@ -1,0 +1,16 @@
+<div>
+    <h1>Добавить новый товар</h1></br>
+    <form>
+        <input class="form-control" type="text" placeholder="Название" ng-model="myForm.title">
+        </br>
+        <input class="form-control" type="number" placeholder="Цена" ng-model="myForm.price">
+        </br>
+        <select ng-model="categories" class="form-select">
+            <option ng-repeat="p in categories" ng-model="myForm.category">{{p}}</option>
+        </select>
+        </br>
+        <input type="file" file-model="myForm.file"/>
+        </br>
+        <button type="submit" class="btn btn-primary" ng-click="saveProduct()">Создать</button>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="main_store_content user_info">
+    <div class="products_list" ng-repeat="p in userRoles">
+        <div class="product_cart">
+            <h2>Информация о юзере</h2>
+            <p class="price_prod">Логин: {{userName}}</p>
+            <p class="price_prod">Привелегии: {{p.authority}}</p>
+            <a href="#!/orders">Заказы</a>
+            <a href="#!/add_product">Создать товар</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div>
+    <div class="container cart">
+        <div class="container">
+            <div class="row cart_title">
+                <div class="col-sm">ТОВАР</div>
+                <div class="col-sm">ЦЕНА 1 ШТ.</div>
+                <div class="col-sm">КОЛИЧЕСТВО</div>
+                <div class="col-sm">ЦЕНА ТОВАРОВ</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row cart_list" ng-repeat="p in cart.items">
+                <div class="col-sm">{{p.productTitle}}</div>
+                <div class="col-sm">{{p.pricePerProduct}} &#8381;</a></div>
+                <div class="col-sm">
+                    {{p.quantity}}
+                </div>
+                <div class="col-sm">{{p.price}} &#8381;</div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="total_coast">Итого: {{cart.totalPrice}} &#8381;</p>
+        </div>
+
+        <h3>Детали заказа</h3>
+        <form novalidate ng-submit="createOrder()">
+            <input class="form-control" type="text" placeholder="Номер телефона получателя" ng-model="orderDetails.phone">
+            <p></p>
+            <input class="form-control" type="text" placeholder="Адрес доставки" ng-model="orderDetails.address">
+            <p></p>
+            <button type="submit" class="btn btn-primary">Оформить заказ</button>
+        </form>
+
+    </div>
+</div>
