@@ -1,7 +1,5 @@
 package ru.geekbrains.springdata.services;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;

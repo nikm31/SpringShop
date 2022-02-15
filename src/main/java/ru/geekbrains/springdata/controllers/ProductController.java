@@ -1,9 +1,9 @@
 package ru.geekbrains.springdata.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 import ru.geekbrains.springdata.dto.ProductDto;
 import ru.geekbrains.springdata.entity.files.ProductImage;
@@ -15,7 +15,6 @@ import ru.geekbrains.springdata.services.CategoryService;
 import ru.geekbrains.springdata.services.ImageSaverService;
 import ru.geekbrains.springdata.services.ProductService;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -25,6 +24,7 @@ public class ProductController {
     private final ProductService productService;
     private final CategoryService categoryService;
     private final ImageSaverService imageSaverService;
+
 
     @GetMapping
     public Page<ProductDto> findAllWithFilters(
@@ -58,6 +58,7 @@ public class ProductController {
         return new ProductDto(productService.findById(id).orElseThrow(() -> new ResourceNotFoundException("Product id = " + id + " not found")));
     }
 
+    @Secured("ADMIN")
     @DeleteMapping(path = "/{id}")
     public ProductDto deleteById(@PathVariable Long id) {
         ProductDto deleted = new ProductDto(productService.findById(id).orElseThrow(() -> new ResourceNotFoundException("Product id = " + id + " not found")));
@@ -65,11 +66,13 @@ public class ProductController {
         return deleted;
     }
 
+    @Secured("ADMIN")
     @PutMapping
     public void changeProduct(@RequestBody ProductDto productDto) {
         productService.updateProductFromDto(productDto);
     }
 
+    @Secured("ADMIN")
     @PostMapping
     public Product addProduct(@ModelAttribute AddNewProductForm form) {
         Product product = new Product();

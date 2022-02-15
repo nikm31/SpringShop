@@ -2,7 +2,6 @@ package ru.geekbrains.springdata.controllers;
 
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import ru.geekbrains.springdata.dto.FileMetaDTO;
 import ru.geekbrains.springdata.services.FileStoreService;
 
 import java.io.IOException;

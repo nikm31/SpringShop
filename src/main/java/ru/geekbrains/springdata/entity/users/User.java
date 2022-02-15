@@ -1,6 +1,5 @@
 package ru.geekbrains.springdata.entity.users;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

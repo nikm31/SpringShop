@@ -2,7 +2,6 @@ package ru.geekbrains.springdata.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -15,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.geekbrains.springdata.entity.roles.Role;
 import ru.geekbrains.springdata.entity.users.User;
 import ru.geekbrains.springdata.exceptions.ResourceNotFoundException;
-import ru.geekbrains.springdata.repositories.role.RoleRepository;
 import ru.geekbrains.springdata.repositories.user.UserRepository;
 
 import java.util.Arrays;

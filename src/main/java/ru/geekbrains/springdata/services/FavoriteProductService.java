@@ -5,7 +5,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import ru.geekbrains.springdata.dto.ProductDto;
 import ru.geekbrains.springdata.exceptions.ResourceNotFoundException;
-import ru.geekbrains.springdata.utils.Cart;
 import ru.geekbrains.springdata.utils.FavoriteProducts;
 
 import java.security.Principal;
