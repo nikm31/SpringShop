@@ -2,17 +2,16 @@ angular.module('store').controller('registerUserController', function ($scope, $
     const contextPath =  $localStorage.contextPath + '/api/v1/register';
 
     $scope.registerUser = function () {
-        if ($scope.newUser.password != $scope.newUser.passwordConfirm) {
-            alert("пароли не совпадают")
-            $scope.newUser.password = ''
-            $scope.newUser.passwordConfirm = ''
-        }
+        // if ($scope.newUser.password != $scope.newUser.passwordConfirmation) {
+        //     alert("пароли не совпадают")
+        //     $scope.newUser.password = ''
+        //     $scope.newUser.passwordConfirmation = ''
+        // }
         $http.post(contextPath, $scope.newUser)
-            .then(function successCallback (response) {
-                alert('Вы успешно зарегистрированы');
-                $location.path('/store');
-            }, function failureCallback (response) {
-                alert(response.data.messages);
+            .then(function (response) {
+                console.log(response)
+                // alert('Вы успешно зарегистрированы');
+                // $location.path('/store');
             });
     }
 

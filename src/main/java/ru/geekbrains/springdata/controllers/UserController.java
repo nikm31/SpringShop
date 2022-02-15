@@ -1,6 +1,7 @@
 package ru.geekbrains.springdata.controllers;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import ru.geekbrains.springdata.entity.users.User;
@@ -14,8 +15,8 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("register")
-    public void registerUser(@RequestBody User user ) {
-        userService.addNewUser(user);
+    public ResponseEntity<String> registerUser(@RequestBody User user) {
+        return userService.registerNewUser(user);
     }
 
     @PutMapping("recover_password")
