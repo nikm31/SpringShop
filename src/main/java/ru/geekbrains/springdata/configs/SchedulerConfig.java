@@ -9,11 +9,4 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ConditionalOnProperty(name = "scheduler.enabled", matchIfMissing = true)
 public class SchedulerConfig {
 
-
-//	@Scheduled(cron = "@hourly")
-//	@Async
-//	public void addProducts() {
-//		String title = productRepo.findById(1L).get().getTitle();
-//		System.out.println(title);
-//	}
 }
