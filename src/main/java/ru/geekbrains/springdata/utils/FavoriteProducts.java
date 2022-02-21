@@ -2,7 +2,9 @@ package ru.geekbrains.springdata.utils;
 
 import lombok.Data;
 import ru.geekbrains.springdata.dto.ProductDto;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Data
 public class FavoriteProducts {

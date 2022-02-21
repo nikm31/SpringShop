@@ -1,8 +1,8 @@
-package ru.geekbrains.springdata.repositories.specifications;
+package ru.geekbrains.springdata.specifications;
 
 
 import org.springframework.data.jpa.domain.Specification;
-import ru.geekbrains.springdata.entity.shop.Product;
+import ru.geekbrains.springdata.entity.Product;
 
 public class ProductSpecs {
 

@@ -2,7 +2,7 @@ package ru.geekbrains.springdata.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.geekbrains.springdata.entity.shop.Category;
+import ru.geekbrains.springdata.entity.Category;
 
 import java.util.List;
 import java.util.stream.Collectors;

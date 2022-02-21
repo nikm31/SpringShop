@@ -31,6 +31,15 @@
     min-width: 380px;
 }
 
+.cart__image{
+    max-height: 200px;
+    max-width: 300px;
+}
+
+.min{
+    max-height: 80px;
+    max-width: 80px;
+}
 
 .nav {
     display: flex;

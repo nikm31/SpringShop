@@ -77,7 +77,7 @@
     angular.module('store').controller('indexController', function ($rootScope, $scope, $http, $localStorage) {
 
         $scope.tryToAuth = function () {
-            $http.post($localStorage.contextPath + '/auth', $scope.user)
+            $http.post($localStorage.contextPath + '/api/v1/auth', $scope.user)
                 .then(function successCallback(response) {
                     if (response.data.token) {
                         $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;

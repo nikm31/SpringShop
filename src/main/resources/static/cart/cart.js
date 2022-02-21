@@ -8,6 +8,7 @@ angular.module('store').controller('cartController', function ($scope, $http, $l
             url: $localStorage.contextPath + '/api/v1/cart/' + $localStorage.webMarketGuestCartId,
             method: 'GET'
         }).then(function (response) {
+            console.log(response)
             $scope.cart = response.data;
         });
     };

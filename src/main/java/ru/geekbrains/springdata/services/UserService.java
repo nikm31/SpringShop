@@ -2,7 +2,6 @@ package ru.geekbrains.springdata.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,15 +11,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.geekbrains.springdata.entity.roles.Role;
-import ru.geekbrains.springdata.entity.users.User;
+import ru.geekbrains.springdata.dto.UserDto;
+import ru.geekbrains.springdata.entity.Role;
+import ru.geekbrains.springdata.entity.User;
 import ru.geekbrains.springdata.exceptions.ResourceNotFoundException;
-import ru.geekbrains.springdata.repositories.role.RoleRepository;
-import ru.geekbrains.springdata.repositories.user.UserRepository;
+import ru.geekbrains.springdata.repositories.UserRepository;
 
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -52,30 +49,41 @@ public class UserService implements UserDetailsService {
         return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
     }
 
-    public ResponseEntity<String> registerNewUser(User user) {
-        if (!user.getPassword().equals(user.getPasswordConfirmation())) {
+    public ResponseEntity<String> registerNewUser(UserDto userDto) {
+
+        if (!userDto.getPassword().equals(userDto.getPasswordConfirmation())) {
             return ResponseEntity.badRequest().body("Пароли не совпадают");
         }
-        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
-            return ResponseEntity.badRequest().body("Имя пользовввателя уже существует");
+        if (userRepository.findByUsername(userDto.getUsername()).isPresent()) {
+            return ResponseEntity.badRequest().body("Имя пользовввателя уже существует: " + userDto.getUsername());
         }
-        List<Role> roles = Arrays.asList(roleService.getStandardUserRole());
-        user.setRoles(roles);
-        user.setSecretAnswer(privateInfoEncoder.encode(user.getSecretAnswer()));
-        user.setPassword(privateInfoEncoder.encode(user.getPassword()));
+        if (userRepository.findByEmail(userDto.getEmail()).isPresent()) {
+            return ResponseEntity.badRequest().body("Такой Email уже занят: " + userDto.getEmail());
+        }
+
+        User user = new User();
+        user.setRoles(roleService.getStandardUserRole());
+        user.setUsername(userDto.getUsername());
+        user.setEmail(userDto.getEmail());
+        user.setSecretQuestion(userDto.getSecretQuestion());
+        user.setSecretAnswer(privateInfoEncoder.encode(userDto.getSecretAnswer()));
+        user.setPassword(privateInfoEncoder.encode(userDto.getPassword()));
+
         userRepository.save(user);
         return ResponseEntity.ok("Успешная регистрация");
     }
 
     @Transactional
-    public void changeUserPassword(User user) {
-        User findUser = userRepository.findByUsernameAndEmail(user.getUsername(), user.getEmail())
-                .orElseThrow(() -> new ResourceNotFoundException("ведены не корректные данные"));
+    public ResponseEntity<String> changeUserPassword(UserDto inputUser) {
+        User currentUser = userRepository.findByUsernameAndEmail(inputUser.getUsername(), inputUser.getEmail())
+                .orElseThrow(() -> new ResourceNotFoundException("Пользователь с таким Email: " + inputUser.getEmail()
+                        + " и логином: " + inputUser.getUsername() + " не найден"));
 
-        if (!privateInfoEncoder.matches(user.getSecretAnswer(), findUser.getSecretAnswer())) {
-            throw new ResourceNotFoundException("ведены не корректные данные");
+        if (!privateInfoEncoder.matches(inputUser.getSecretAnswer(), currentUser.getSecretAnswer())) {
+            throw new ResourceNotFoundException("Ответ на секретный вопрос: " + currentUser.getSecretQuestion() + " не верный");
         }
 
-        findUser.setPassword(privateInfoEncoder.encode(user.getPassword()));
+        currentUser.setPassword(privateInfoEncoder.encode(inputUser.getPassword()));
+        return ResponseEntity.ok("Пароль успешно сменен");
     }
 }

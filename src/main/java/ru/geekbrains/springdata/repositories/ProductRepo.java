@@ -1,10 +1,10 @@
-package ru.geekbrains.springdata.repositories.shop;
+package ru.geekbrains.springdata.repositories;
 
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
-import ru.geekbrains.springdata.entity.shop.Product;
+import ru.geekbrains.springdata.entity.Product;
 
 import java.util.Optional;
 

@@ -20,14 +20,17 @@ spring:
     multipart:
       max-file-size: 1MB
       max-request-size: 5MB
-logging:
-  level:
-    org:
-      springframework:
-        security: INFO
 jwt:
   secret: dwesfedgsreghrthrfdgrtghiojfcoidjcdopiwad233c2
   lifetime: 36000000
 springdoc:
   swagger-ui:
     path: /api-doc
+logging:
+  pattern:
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.boot: ERROR
+    org.hibernate: ERROR
+  file:
+    name: logs/shop.log

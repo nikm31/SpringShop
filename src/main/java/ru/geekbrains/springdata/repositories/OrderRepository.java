@@ -1,11 +1,11 @@
-package ru.geekbrains.springdata.repositories.shop;
+package ru.geekbrains.springdata.repositories;
 
 
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import ru.geekbrains.springdata.entity.shop.Order;
+import ru.geekbrains.springdata.entity.Order;
 
 import java.util.List;
 

@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.geekbrains.springdata.dto.OrderDetailsDto;
 import ru.geekbrains.springdata.dto.OrderItemDto;
-import ru.geekbrains.springdata.entity.shop.Order;
-import ru.geekbrains.springdata.entity.shop.OrderItem;
-import ru.geekbrains.springdata.entity.users.User;
+import ru.geekbrains.springdata.entity.Order;
+import ru.geekbrains.springdata.entity.OrderItem;
+import ru.geekbrains.springdata.entity.User;
 import ru.geekbrains.springdata.exceptions.ResourceNotFoundException;
-import ru.geekbrains.springdata.repositories.shop.OrderRepository;
+import ru.geekbrains.springdata.repositories.OrderRepository;
 import ru.geekbrains.springdata.utils.Cart;
 
 import java.security.Principal;

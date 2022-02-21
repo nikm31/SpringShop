@@ -1,11 +1,8 @@
-package ru.geekbrains.springdata.entity.users;
+package ru.geekbrains.springdata.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import ru.geekbrains.springdata.entity.files.FileMeta;
-import ru.geekbrains.springdata.entity.roles.Role;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -28,9 +25,6 @@ public class User {
 
 	@Column(name = "password")
 	private String password;
-
-	@Transient
-	private String passwordConfirmation;
 
 	@Column(name = "email")
 	private String email;
@@ -57,4 +51,5 @@ public class User {
 
 	@OneToMany(mappedBy = "user")
 	private List<FileMeta> fileMeta = new ArrayList<>();
+
 }

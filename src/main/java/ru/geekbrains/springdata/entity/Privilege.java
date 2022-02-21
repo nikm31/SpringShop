@@ -1,4 +1,4 @@
-package ru.geekbrains.springdata.entity.roles;
+package ru.geekbrains.springdata.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
