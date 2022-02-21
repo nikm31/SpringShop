@@ -9,6 +9,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.geekbrains.springdata.dto.AuthRequest;
 import ru.geekbrains.springdata.dto.AuthResponse;
@@ -18,6 +19,7 @@ import ru.geekbrains.springdata.utils.JwtTokenUtil;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/api/v1/")
 public class AuthController {
 
     private final UserService userService;

@@ -16,28 +16,43 @@ create table products
     title       varchar(255),
     price       int,
     category_id bigint references categories (id),
-    image       varchar(255),
+    image_path  varchar(255),
     created_at  timestamp default current_timestamp,
     updated_at  timestamp default current_timestamp
 );
 
-insert into products (title, price, category_id)
-values ('Intel Core i7-12700KF', 35999, 1),
-       ('Intel Core i9-11900K', 41399, 1),
-       ('AMD Ryzen 9 5900X', 46999, 1),
-       ('Dell [370-AEVP] 64 ГБ', 61000, 2),
-       ('JRam [JAL1G800D2] 1 ГБ', 750, 2),
-       ('Intel Core i3-12100KF', 12600, 1),
-       ('Intel Core i5-12600K', 25000, 1),
-       ('Kingston [KIL1G800D2] 16 ГБ', 4500, 2),
-       ('Samsung [KIL1G800D2] 8 ГБ', 2500, 2),
-       ('JRam [JAL1G800D2] 1 ГБ', 750, 2),
-       ('Dell [370-AEVP] 64 ГБ', 66000, 2),
-       ('JRam [JAL1G800D2] 1 ГБ', 950, 2),
-       ('Intel Core i3-12100KF', 17600, 1),
-       ('Intel Core i5-12600K', 21000, 1),
-       ('Intel Core i7-12700KF', 38999, 1),
-       ('Dell [370-AEVP] 64 ГБ', 62000, 2);
+insert into products (title, price, category_id, image_path)
+values ('Intel Core i7-12700KF', 35999, 1, 'img1.jpg'),
+       ('Intel Core i9-11900K', 41399, 1, 'img1.jpg'),
+       ('AMD Ryzen 9 5900X', 46999, 1, 'img1.jpg'),
+       ('Dell [370-AEVP] 64 ГБ', 61000, 2, 'img2.jpg'),
+       ('JRam [JAL1G800D2] 1 ГБ', 750, 2, 'img2.jpg'),
+       ('Intel Core i3-12100KF', 12600, 1, 'img1.jpg'),
+       ('Intel Core i5-12600K', 25000, 1, 'img1.jpg'),
+       ('Kingston [KIL1G800D2] 16 ГБ', 4500, 2, 'img2.jpg'),
+       ('Samsung [KIL1G800D2] 8 ГБ', 2500, 2, 'img2.jpg'),
+       ('JRam [JAL1G800D2] 1 ГБ', 750, 2, 'img2.jpg'),
+       ('Dell [370-AEVP] 64 ГБ', 66000, 2, 'img2.jpg'),
+       ('JRam [JAL1G800D2] 1 ГБ', 950, 2, 'img2.jpg'),
+       ('Intel Core i3-12100KF', 17600, 1, 'img1.jpg'),
+       ('Intel Core i5-12600K', 21000, 1, 'img1.jpg'),
+       ('Intel Core i7-12700KF', 38999, 1, 'img1.jpg'),
+       ('Dell [370-AEVP] 64 ГБ', 62000, 2, 'img2.jpg');
+
+create table product_images
+(
+    id         bigserial primary key,
+    product_id bigint references products (id),
+    image_path       varchar(255),
+    created_at timestamp default current_timestamp,
+    updated_at timestamp default current_timestamp
+);
+
+insert into product_images (product_id, image_path)
+values (1, 'img1.jpg'),
+       (2, 'img1.jpg'),
+       (3, 'img2.jpg'),
+       (1, 'img2.jpg');
 
 create table users
 (
@@ -76,7 +91,7 @@ CREATE TABLE users_roles
 
 CREATE TABLE roles_privileges
 (
-    role_id bigint not null references roles (id),
+    role_id      bigint not null references roles (id),
     privilege_id bigint not null references privileges (id),
     primary key (role_id, privilege_id)
 );

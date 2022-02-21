@@ -1,38 +1,30 @@
-package ru.geekbrains.springdata.entity.files;
+package ru.geekbrains.springdata.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import ru.geekbrains.springdata.entity.users.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.UUID;
+import java.util.List;
 
 @Entity
-@Table(name = "file_info_metadata")
 @Data
 @NoArgsConstructor
-public class FileMeta {
+@Table(name = "categories")
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "hash")
-    private UUID hash;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "filename")
-    private String fileName;
-
-    @Column(name = "sub_type")
-    private Long subType;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @OneToMany(mappedBy = "category")
+    private List<Product> products;
 
     @CreationTimestamp
     @Column(name = "created_at")

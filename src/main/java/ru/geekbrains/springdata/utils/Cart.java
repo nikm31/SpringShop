@@ -2,7 +2,7 @@ package ru.geekbrains.springdata.utils;
 
 import lombok.Data;
 import ru.geekbrains.springdata.dto.OrderItemDto;
-import ru.geekbrains.springdata.entity.shop.Product;
+import ru.geekbrains.springdata.entity.Product;
 
 import java.util.ArrayList;
 import java.util.Iterator;

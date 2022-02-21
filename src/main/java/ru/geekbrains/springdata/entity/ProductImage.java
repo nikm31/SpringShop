@@ -1,8 +1,7 @@
-package ru.geekbrains.springdata.entity.files;
+package ru.geekbrains.springdata.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.geekbrains.springdata.entity.shop.Product;
 
 import javax.persistence.*;
 
@@ -20,6 +19,6 @@ public class ProductImage {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    @Column(name = "path")
+    @Column(name = "image_path")
     private String path;
 }

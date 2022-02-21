@@ -1,4 +1,4 @@
-package ru.geekbrains.springdata.entity.shop;
+package ru.geekbrains.springdata.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import ru.geekbrains.springdata.entity.files.ProductImage;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -34,6 +33,9 @@ public class Product {
     @JoinColumn(name = "category_id")
     @JsonIgnore
     private Category category;
+
+    @Column(name = "image_path")
+    private String mainImagePath;
 
     @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "product")
     private List<ProductImage> images;

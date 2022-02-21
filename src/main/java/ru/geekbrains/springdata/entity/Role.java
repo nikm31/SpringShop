@@ -1,9 +1,8 @@
-package ru.geekbrains.springdata.entity.roles;
+package ru.geekbrains.springdata.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import ru.geekbrains.springdata.entity.users.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

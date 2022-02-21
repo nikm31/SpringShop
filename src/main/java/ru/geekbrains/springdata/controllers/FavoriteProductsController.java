@@ -24,12 +24,12 @@ public class FavoriteProductsController {
 	}
 
 	@GetMapping("/{uuid}/remove/{productId}")
-	public void removeItem(Principal principal, @PathVariable String uuid, @PathVariable Long productId) {
+	public void deleteItem(Principal principal, @PathVariable String uuid, @PathVariable Long productId) {
 		favoriteProductService.removeFavorite(principal, uuid, productId);
 	}
 
 	@DeleteMapping("/{uuid}")
-	public void removeAll(Principal principal, @PathVariable String uuid) {
+	public void deleteAll(Principal principal, @PathVariable String uuid) {
 		favoriteProductService.removeAll(principal, uuid);
 	}
 }

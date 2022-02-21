@@ -13,7 +13,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler
-    public ResponseEntity<?> catchValidationExceptio(DataValidationException e) {
+    public ResponseEntity<?> catchValidationException(DataValidationException e) {
         return new ResponseEntity<>(new ShopError(e.getMessage()), HttpStatus.BAD_REQUEST);
     }
 

@@ -3,7 +3,7 @@ package ru.geekbrains.springdata.services;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-import ru.geekbrains.springdata.entity.shop.Product;
+import ru.geekbrains.springdata.entity.Product;
 import ru.geekbrains.springdata.exceptions.ResourceNotFoundException;
 import ru.geekbrains.springdata.utils.Cart;
 

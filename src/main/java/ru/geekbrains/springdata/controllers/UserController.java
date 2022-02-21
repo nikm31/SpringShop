@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-import ru.geekbrains.springdata.entity.users.User;
+import ru.geekbrains.springdata.dto.UserDto;
 import ru.geekbrains.springdata.services.UserService;
 
 @RestController
@@ -15,13 +15,13 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("register")
-    public ResponseEntity<String> registerUser(@RequestBody User user) {
+    public ResponseEntity<String> registerUser(@RequestBody UserDto user) {
         return userService.registerNewUser(user);
     }
 
     @PutMapping("recover_password")
-    public void changeUserPassword(@RequestBody User user ) {
-        userService.changeUserPassword(user);
+    public ResponseEntity<String> changeUserPassword(@RequestBody UserDto user) {
+        return userService.changeUserPassword(user);
     }
 
     @GetMapping("account")

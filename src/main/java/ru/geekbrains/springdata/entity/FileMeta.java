@@ -1,4 +1,4 @@
-package ru.geekbrains.springdata.entity.shop;
+package ru.geekbrains.springdata.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,34 +7,31 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
-
+@Entity
+@Table(name = "file_info_metadata")
 @Data
 @NoArgsConstructor
-@Entity
-@Table(name = "order_items")
-public class OrderItem {
+public class FileMeta {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @Column(name = "hash")
+    private UUID hash;
+
+    @Column(name = "filename")
+    private String fileName;
+
+    @Column(name = "sub_type")
+    private Long subType;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
-
-    @Column(name = "quantity")
-    private int quantity;
-
-    @Column(name = "price_per_product")
-    private int pricePerProduct;
-
-    @Column(name = "price")
-    private int price;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @CreationTimestamp
     @Column(name = "created_at")

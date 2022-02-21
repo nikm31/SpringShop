@@ -1,19 +1,18 @@
 package ru.geekbrains.springdata.dto;
 
 import lombok.Data;
-import ru.geekbrains.springdata.entity.files.FileMeta;
+import lombok.NoArgsConstructor;
+import ru.geekbrains.springdata.entity.FileMeta;
 
 import java.util.UUID;
 
 @Data
-public class FileMetaDTO {
+@NoArgsConstructor
+public class FileMetaDto {
      private UUID hash;
      private String fileName;
 
-     public FileMetaDTO() {
-     }
-
-     public FileMetaDTO(FileMeta fileMeta) {
+     public FileMetaDto(FileMeta fileMeta) {
           this.hash = fileMeta.getHash();
           this.fileName = fileMeta.getFileName();
      }
