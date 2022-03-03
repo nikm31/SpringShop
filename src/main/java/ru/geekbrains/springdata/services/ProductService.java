@@ -12,7 +12,10 @@ import ru.geekbrains.springdata.entity.Product;
 import ru.geekbrains.springdata.exceptions.ResourceNotFoundException;
 import ru.geekbrains.springdata.repositories.ProductRepo;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -56,5 +59,25 @@ public class ProductService {
             product.setCategory(category);
         }
     }
+/////////////// START SOAP ///////////////
+
+    public static final Function<Product, ru.geekbrains.springdata.soap.Product> functionEntityToSoap = se -> {
+        ru.geekbrains.springdata.soap.Product p = new ru.geekbrains.springdata.soap.Product();
+        p.setId(se.getId());
+        p.setTitle(se.getTitle());
+        p.setPrice(se.getPrice());
+        p.setTitle(se.getTitle());
+        return p;
+    };
+
+    public List<ru.geekbrains.springdata.soap.Product> getAllProducts() {
+        return productRepo.findAll().stream().map(functionEntityToSoap).collect(Collectors.toList());
+    }
+
+    public ru.geekbrains.springdata.soap.Product getById(Long id) {
+        return productRepo.findById(id).map(functionEntityToSoap).get();
+    }
+
+/////////////// END SOAP ///////////////
 
 }
