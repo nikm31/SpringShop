@@ -1,0 +1,10 @@
+server:
+  port: 8111
+  servlet:
+    context-path: /shop-favorite-products
+integrations:
+  product-service:
+    url: http://127.0.0.1:8120/shop-core/
+    connection-timeout: 5000
+    read-timeout: 10000
+    write-timeout: 10000
