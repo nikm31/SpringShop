@@ -1,0 +1,27 @@
+server:
+  port: 8130
+  servlet:
+    context-path: /shop-files
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:mydatabase;MODE=PostgreSQL
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: false
+integrations:
+  auth-service:
+    url: http://127.0.0.1:8100/shop-auth/
+    connect-timeout: 5000
+    read-timeout: 10000
+    write-timeout: 5000
