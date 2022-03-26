@@ -47,6 +47,13 @@ spring:
             - StripPrefix=1
             - PrefixPath=/shop-favorite-products
             - JwtAuthFilter
+        - id: file-storage-service
+          uri: http://127.0.0.1:8130
+          predicates:
+            - Path=/file/**
+          filters:
+            - StripPrefix=1
+            - PrefixPath=/shop-files
 
 jwt:
   secret: dwesfedgsreghrthrfdgrtghiojfcoidjcdopiw44433c2

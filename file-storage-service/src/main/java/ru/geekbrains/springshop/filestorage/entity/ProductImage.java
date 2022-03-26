@@ -1,4 +1,4 @@
-package ru.geekbrains.springdata.entity;
+package ru.geekbrains.springshop.filestorage.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,30 +7,23 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
-@Table(name = "file_info_metadata")
+@Table(name = "product_images")
 @Data
 @NoArgsConstructor
-public class FileMeta {
+public class ProductImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "hash")
-    private UUID hash;
+    @Column(name = "product_id")
+    private Long productId;
 
-    @Column(name = "filename")
-    private String fileName;
-
-    @Column(name = "sub_type")
-    private Long subType;
-
-    @Column(name = "user_id")
-    private String user;
+    @Column(name = "image_path")
+    private String imagePath;
 
     @CreationTimestamp
     @Column(name = "created_at")

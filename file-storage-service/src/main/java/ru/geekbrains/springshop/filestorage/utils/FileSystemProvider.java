@@ -1,10 +1,10 @@
-package ru.geekbrains.springdata.utils;
+package ru.geekbrains.springshop.filestorage.utils;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
-public interface IFileSystemProvider {
+public interface FileSystemProvider {
 
     File getProductImage (String imagePath);
 

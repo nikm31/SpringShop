@@ -8,11 +8,6 @@ public class FileMetaDto {
      private UUID hash;
      private String fileName;
 
-//     public FileMetaDto(FileMeta fileMeta) {
-//          this.hash = fileMeta.getHash();
-//          this.fileName = fileMeta.getFileName();
-//     }
-
      public UUID getHash() {
           return hash;
      }

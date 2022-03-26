@@ -1,7 +1,7 @@
 server:
-  port: 8120
+  port: 8130
   servlet:
-    context-path: /shop-core
+    context-path: /shop-files
 spring:
   datasource:
     driver-class-name: org.h2.Driver
@@ -20,11 +20,6 @@ spring:
       settings:
         web-allow-others: false
 integrations:
-  cart-service:
-    url: http://127.0.0.1:8110/shop-cart/
-    connect-timeout: 5000
-    read-timeout: 10000
-    write-timeout: 5000
   auth-service:
     url: http://127.0.0.1:8100/shop-auth/
     connect-timeout: 5000

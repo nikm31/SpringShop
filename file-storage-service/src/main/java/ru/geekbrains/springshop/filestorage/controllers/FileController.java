@@ -1,5 +1,4 @@
-package ru.geekbrains.springdata.controllers;
-
+package ru.geekbrains.springshop.filestorage.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.ByteArrayResource;
@@ -8,8 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import ru.geekbrains.springdata.services.FileStoreService;
 import ru.geekbrains.springshop.api.exeptions.ResourceNotFoundException;
+import ru.geekbrains.springshop.filestorage.services.FileStoreService;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -18,25 +17,9 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor
-public class FilesController {
+public class FileController {
 
 	private final FileStoreService fileStoreService;
-
-	@GetMapping("/getimg")
-	public ResponseEntity<?> getImage(@RequestParam("path") String imgPath) {
-		byte[] image;
-
-		try {
-			image = fileStoreService.getProductImage(imgPath);
-		} catch (IOException e) {
-			return new ResponseEntity<>(new ResourceNotFoundException("Невозможно прочитать файл: " + imgPath + " ошибка: " + e),
-					HttpStatus.BAD_REQUEST);
-		}
-
-		return ResponseEntity.ok()
-				.contentType(MediaType.IMAGE_JPEG)
-				.body(image);
-	}
 
 	@PostMapping("/storefile")
 	public ResponseEntity<String> uploadFile(

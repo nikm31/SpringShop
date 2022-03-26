@@ -3,19 +3,21 @@ server:
   servlet:
     context-path: /shop-auth
 spring:
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
-      dialect: org.hibernate.dialect.PostgreSQL95Dialect
   datasource:
-    url: jdbc:postgresql://localhost:5432/Auth
-    username: postgres
-    password: postgres
-    driverClassName: org.postgresql.Driver
-  sql:
-    init:
-      platform: postgres
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./users;MODE=PostgreSQL
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: false
 jwt:
   secret: dwesfedgsreghrthrfdgrtghiojfcoidjcdopiw44433c2
   lifetime: 36000000

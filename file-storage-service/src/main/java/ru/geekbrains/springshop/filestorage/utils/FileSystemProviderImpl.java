@@ -1,4 +1,4 @@
-package ru.geekbrains.springdata.utils;
+package ru.geekbrains.springshop.filestorage.utils;
 
 
 import lombok.NoArgsConstructor;
@@ -17,19 +17,20 @@ import java.util.stream.Stream;
 
 @Component
 @NoArgsConstructor
-public class FileSystemProvider implements IFileSystemProvider {
+public class FileSystemProviderImpl implements FileSystemProvider {
 
-	private String storeFolder;
-	private Path storePath;
+	private String filesFolder;
+	private Path filesPath;
 	private String imgFolder;
 	private Path imagesPath;
 
 	@PostConstruct
 	public void init() {
-		storeFolder = "core-service/FILE_STORE";
-		imgFolder = "core-service/img";
+		filesFolder = "file-storage-service/FILE_STORE";
+		imgFolder = "file-storage-service/img";
+
 		String currentPath = Paths.get("").toAbsolutePath().toString();
-		storePath = Paths.get(currentPath, storeFolder);
+		filesPath = Paths.get(currentPath, filesFolder);
 		imagesPath = Paths.get(currentPath, imgFolder);
 	}
 
@@ -42,7 +43,7 @@ public class FileSystemProvider implements IFileSystemProvider {
 	@Override
 	public byte[] getFile(String fileHash) throws IOException {
 
-		try (Stream<Path> walk = Files.walk(storePath)) {
+		try (Stream<Path> walk = Files.walk(filesPath)) {
 			String fileName = walk.map(Path::toString)
 					.filter(f -> f.contains(fileHash))
 					.findFirst()
@@ -58,7 +59,7 @@ public class FileSystemProvider implements IFileSystemProvider {
 		String fileNameExtension = FilenameUtils.getExtension(fileName);
 		fileName = String.format("%s.%s", md5, fileNameExtension); //  сохраняем файл - меняем название файла на его хеш и длбавляем его расширение
 
-		Path fullFileNamePath = Paths.get(storePath.toString(), fileName);
+		Path fullFileNamePath = Paths.get(filesPath.toString(), fileName);
 		String fullFileName = fullFileNamePath.toString();
 
 		if (!Files.exists(fullFileNamePath)) {
@@ -67,10 +68,9 @@ public class FileSystemProvider implements IFileSystemProvider {
 		return fullFileName;
 	}
 
-
 	@Override
 	public void deleteFile(String fileName) throws IOException {
-		Path path = Paths.get(storePath + File.separator + fileName);
+		Path path = Paths.get(filesPath + File.separator + fileName);
 		if (Files.exists(path)) {
 			Files.delete(path);
 		}

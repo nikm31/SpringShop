@@ -8,6 +8,7 @@ import ru.geekbrains.springdata.entity.Category;
 import ru.geekbrains.springdata.repositories.CategoryRepo;
 
 import java.util.Optional;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 // java.lang.IllegalStateException: Failed to load ApplicationContext

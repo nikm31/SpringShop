@@ -1,492 +1,102 @@
-2022-03-20 10:51:40,005 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 5604 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Николай in C:\Users\Николай\Desktop\SpringShop2)
-2022-03-20 10:51:40,015 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
-2022-03-20 10:51:40,530 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 10:51:40,530 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 10:51:40,543 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2022-03-20 10:51:40,649 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 10:51:40,650 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-20 10:51:40,703 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
-2022-03-20 10:51:40,709 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 10:51:40,710 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 10:51:40,717 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:51:40,718 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.FileMetaRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:51:40,719 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:51:40,719 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:51:40,720 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-03-20 10:51:41,051 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2022-03-20 10:51:41,051 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-20 10:51:41,126 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
-2022-03-20 10:51:41,192 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2022-03-20 10:51:41,338 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2022-03-20 10:51:42,034 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 10:51:43,452 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 3.794 seconds (JVM running for 4.451)
-2022-03-20 10:52:17,890 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-20 10:52:17,890 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2022-03-20 10:52:17,891 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
-2022-03-20 10:58:29,096 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 10:58:29,098 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2022-03-20 10:58:29,102 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
-2022-03-20 10:58:37,979 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 5336 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Николай in C:\Users\Николай\Desktop\SpringShop2)
-2022-03-20 10:58:37,980 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
-2022-03-20 10:58:38,455 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 10:58:38,456 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 10:58:38,469 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2022-03-20 10:58:38,596 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 10:58:38,597 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-20 10:58:38,651 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
-2022-03-20 10:58:38,655 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 10:58:38,656 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 10:58:38,661 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:58:38,662 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.FileMetaRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:58:38,664 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:58:38,665 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 10:58:38,665 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-03-20 10:58:39,031 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2022-03-20 10:58:39,032 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-20 10:58:39,122 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
-2022-03-20 10:58:39,196 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2022-03-20 10:58:39,269 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2022-03-20 10:58:39,961 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 10:58:41,430 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 3.878 seconds (JVM running for 4.587)
-2022-03-20 11:00:17,580 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-20 11:00:17,580 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2022-03-20 11:00:17,581 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
-2022-03-20 12:19:05,337 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 12:19:05,342 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2022-03-20 12:19:05,344 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
-2022-03-20 20:35:20,688 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 13928 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Николай in C:\Users\Николай\Desktop\SpringShop2)
-2022-03-20 20:35:20,690 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
-2022-03-20 20:35:21,242 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:35:21,243 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:35:21,259 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:35:21,387 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:35:21,387 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-20 20:35:21,475 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 4 JPA repository interfaces.
-2022-03-20 20:35:21,482 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:35:21,482 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:35:21,488 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:35:21,488 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.FileMetaRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:35:21,491 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:35:21,491 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:35:21,492 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:35:21,916 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2022-03-20 20:35:21,917 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-20 20:35:22,004 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
-2022-03-20 20:35:22,087 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2022-03-20 20:35:22,342 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2022-03-20 20:35:23,152 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 20:35:24,045 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 3.88 seconds (JVM running for 4.654)
-2022-03-20 20:35:53,606 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-20 20:35:53,606 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2022-03-20 20:35:53,607 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
-2022-03-20 20:35:53,675 ERROR [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [/shop-core] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')] with root cause
-java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')
-	at ru.geekbrains.springdata.converters.ProductConverter.pageEntityToDto(ProductConverter.java:35)
-	at ru.geekbrains.springdata.controllers.ProductController.findAllWithFilters(ProductController.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-2022-03-20 20:35:57,760 ERROR [http-nio-8120-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [/shop-core] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')] with root cause
-java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')
-	at ru.geekbrains.springdata.converters.ProductConverter.pageEntityToDto(ProductConverter.java:35)
-	at ru.geekbrains.springdata.controllers.ProductController.findAllWithFilters(ProductController.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-2022-03-20 20:36:10,392 ERROR [http-nio-8120-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [/shop-core] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')] with root cause
-java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')
-	at ru.geekbrains.springdata.converters.ProductConverter.pageEntityToDto(ProductConverter.java:35)
-	at ru.geekbrains.springdata.controllers.ProductController.findAllWithFilters(ProductController.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-2022-03-20 20:36:11,528 ERROR [http-nio-8120-exec-4] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [/shop-core] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')] with root cause
-java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')
-	at ru.geekbrains.springdata.converters.ProductConverter.pageEntityToDto(ProductConverter.java:35)
-	at ru.geekbrains.springdata.controllers.ProductController.findAllWithFilters(ProductController.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-2022-03-20 20:36:32,198 ERROR [http-nio-8120-exec-5] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [/shop-core] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')] with root cause
-java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')
-	at ru.geekbrains.springdata.converters.ProductConverter.pageEntityToDto(ProductConverter.java:35)
-	at ru.geekbrains.springdata.controllers.ProductController.findAllWithFilters(ProductController.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-2022-03-20 20:37:26,335 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 20:37:26,337 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2022-03-20 20:37:26,339 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
-2022-03-20 20:37:29,664 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 8448 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Николай in C:\Users\Николай\Desktop\SpringShop2)
-2022-03-20 20:37:29,666 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
-2022-03-20 20:37:30,217 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:37:30,219 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:37:30,239 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:37:30,417 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:37:30,417 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-20 20:37:30,507 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 4 JPA repository interfaces.
-2022-03-20 20:37:30,513 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:37:30,513 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:37:30,520 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:37:30,521 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.FileMetaRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:37:30,523 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:37:30,523 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:37:30,524 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:37:31,036 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2022-03-20 20:37:31,037 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-20 20:37:31,119 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
-2022-03-20 20:37:31,209 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2022-03-20 20:37:31,320 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2022-03-20 20:37:32,108 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 20:37:57,802 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 28.462 seconds (JVM running for 29.681)
-2022-03-20 20:38:04,749 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-20 20:38:04,749 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2022-03-20 20:38:04,750 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
-2022-03-20 20:38:30,917 ERROR [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [/shop-core] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')] with root cause
-java.lang.ClassCastException: class java.util.stream.ReferencePipeline$3 cannot be cast to class org.springframework.data.domain.Page (java.util.stream.ReferencePipeline$3 is in module java.base of loader 'bootstrap'; org.springframework.data.domain.Page is in unnamed module of loader 'app')
-	at ru.geekbrains.springdata.converters.ProductConverter.pageEntityToDto(ProductConverter.java:35)
-	at ru.geekbrains.springdata.controllers.ProductController.findAllWithFilters(ProductController.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-2022-03-20 20:38:31,050 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 20:38:31,051 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2022-03-20 20:38:31,053 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
-2022-03-20 20:44:57,567 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 5360 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Николай in C:\Users\Николай\Desktop\SpringShop2)
-2022-03-20 20:44:57,568 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
-2022-03-20 20:44:58,013 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:44:58,013 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:44:58,028 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:44:58,152 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:44:58,152 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-20 20:44:58,216 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
-2022-03-20 20:44:58,222 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:44:58,222 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:44:58,228 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:44:58,228 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.FileMetaRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:44:58,230 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:44:58,231 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:44:58,231 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:44:58,706 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2022-03-20 20:44:58,707 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-20 20:44:58,785 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
-2022-03-20 20:44:58,851 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2022-03-20 20:44:58,926 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2022-03-20 20:44:59,739 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 20:45:24,839 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 27.825 seconds (JVM running for 28.59)
-2022-03-20 20:45:33,987 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-20 20:45:33,987 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2022-03-20 20:45:33,988 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
-2022-03-20 20:46:04,722 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 20:46:04,723 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2022-03-20 20:46:04,725 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
-2022-03-20 20:46:08,521 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 7944 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Николай in C:\Users\Николай\Desktop\SpringShop2)
-2022-03-20 20:46:08,523 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
-2022-03-20 20:46:08,987 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:46:08,988 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:46:09,000 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:46:09,106 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:46:09,107 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-20 20:46:09,161 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
-2022-03-20 20:46:09,166 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-03-20 20:46:09,166 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-03-20 20:46:09,171 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:46:09,172 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.FileMetaRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:46:09,173 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:46:09,174 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2022-03-20 20:46:09,174 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2022-03-20 20:46:09,511 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2022-03-20 20:46:09,512 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-03-20 20:46:09,586 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
-2022-03-20 20:46:09,647 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2022-03-20 20:46:09,711 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2022-03-20 20:46:10,306 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 20:46:11,093 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 2.995 seconds (JVM running for 3.564)
-2022-03-20 20:46:14,680 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-20 20:46:14,680 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
-2022-03-20 20:46:14,681 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
-2022-03-20 21:40:59,629 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-03-20 21:40:59,635 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2022-03-20 21:40:59,638 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-03-26 11:40:54,511 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 7840 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Nikolay in C:\Users\Николай\Desktop\SpringShop2)
+2022-03-26 11:40:54,516 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
+2022-03-26 11:40:55,046 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 11:40:55,046 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 11:40:55,063 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-03-26 11:40:55,186 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 11:40:55,186 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-26 11:40:55,240 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2022-03-26 11:40:55,246 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 11:40:55,246 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 11:40:55,251 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 11:40:55,253 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 11:40:55,253 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 11:40:55,253 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-03-26 11:40:55,646 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-03-26 11:40:55,647 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-26 11:40:55,745 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
+2022-03-26 11:40:55,815 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-03-26 11:40:56,027 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-03-26 11:40:56,733 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 11:40:57,765 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 3.834 seconds (JVM running for 4.568)
+2022-03-26 11:41:01,277 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 11:41:01,278 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-03-26 11:41:01,280 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-03-26 11:59:55,744 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 6576 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Nikolay in C:\Users\Николай\Desktop\SpringShop2)
+2022-03-26 11:59:55,747 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
+2022-03-26 11:59:56,268 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 11:59:56,269 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 11:59:56,281 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-03-26 11:59:56,422 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 11:59:56,423 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-26 11:59:56,471 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2022-03-26 11:59:56,477 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 11:59:56,478 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 11:59:56,482 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 11:59:56,484 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 11:59:56,485 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 11:59:56,485 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-03-26 11:59:56,840 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-03-26 11:59:56,840 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-26 11:59:56,923 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
+2022-03-26 11:59:56,996 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-03-26 11:59:57,074 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-03-26 11:59:57,676 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 11:59:58,458 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 3.126 seconds (JVM running for 3.764)
+2022-03-26 12:10:22,744 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 12:10:22,745 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-03-26 12:10:22,747 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-03-26 12:17:51,757 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 3468 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Nikolay in C:\Users\Николай\Desktop\SpringShop2)
+2022-03-26 12:17:51,759 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
+2022-03-26 12:17:52,254 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 12:17:52,255 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 12:17:52,269 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-03-26 12:17:52,375 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 12:17:52,375 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-26 12:17:52,424 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2022-03-26 12:17:52,428 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 12:17:52,429 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 12:17:52,433 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 12:17:52,435 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 12:17:52,436 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 12:17:52,436 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-03-26 12:17:52,787 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-03-26 12:17:52,788 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-26 12:17:52,854 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
+2022-03-26 12:17:52,918 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-03-26 12:17:52,985 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-03-26 12:17:53,666 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 12:17:54,501 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 3.099 seconds (JVM running for 3.653)
+2022-03-26 12:18:07,823 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-26 12:18:07,823 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2022-03-26 12:18:07,824 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
+2022-03-26 12:18:25,013 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 12:18:25,014 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-03-26 12:18:25,016 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2022-03-26 12:28:16,760 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Starting ShopCoreApp using Java 16.0.2 on DESKTOP-J9NAUSU with PID 1164 (C:\Users\Николай\Desktop\SpringShop2\core-service\target\classes started by Nikolay in C:\Users\Николай\Desktop\SpringShop2)
+2022-03-26 12:28:16,764 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : No active profile set, falling back to default profiles: default
+2022-03-26 12:28:17,275 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 12:28:17,276 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 12:28:17,289 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-03-26 12:28:17,401 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 12:28:17,401 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-26 12:28:17,455 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2022-03-26 12:28:17,459 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-26 12:28:17,459 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-26 12:28:17,465 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.CategoryRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 12:28:17,466 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.OrderRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 12:28:17,467 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ru.geekbrains.springdata.repositories.ProductRepo. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-03-26 12:28:17,467 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-03-26 12:28:17,837 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-03-26 12:28:17,838 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-26 12:28:17,912 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring embedded WebApplicationContext
+2022-03-26 12:28:17,984 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2022-03-26 12:28:18,055 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2022-03-26 12:28:18,752 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 12:28:19,573 INFO  [main] ru.geekbrains.springdata.ShopCoreApp : Started ShopCoreApp in 3.389 seconds (JVM running for 4.073)
+2022-03-26 12:28:46,849 INFO  [http-nio-8120-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/shop-core] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-26 12:28:46,850 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2022-03-26 12:28:46,851 INFO  [http-nio-8120-exec-1] org.springframework.web.servlet.DispatcherServlet : Completed initialization in 1 ms
+2022-03-26 12:53:04,717 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-26 12:53:04,719 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2022-03-26 12:53:04,721 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.

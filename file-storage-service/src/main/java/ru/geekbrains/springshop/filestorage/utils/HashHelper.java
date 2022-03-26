@@ -1,4 +1,4 @@
-package ru.geekbrains.springdata.utils;
+package ru.geekbrains.springshop.filestorage.utils;
 
 import java.nio.ByteBuffer;
 import java.security.MessageDigest;

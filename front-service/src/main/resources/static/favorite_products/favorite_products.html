@@ -5,7 +5,7 @@
 
         <div class="card-group margin" ng-repeat="(key, value) in cart.items">
             <div class="card">
-                <img src="http://127.0.0.1:5555/core/api/v1/getimg?path={{value.mainImagePath}}" class="card-img-top cart__image" alt="productImage">
+                <img src="http://127.0.0.1:5555/files/api/v1/getimg?path={{value.mainImagePath}}" class="card-img-top cart__image" alt="productImage">
                 <div class="card-body">
                     <h5 class="card-title">{{value.title}}<span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">ID: {{value.id}}</span>
