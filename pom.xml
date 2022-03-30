@@ -13,6 +13,7 @@
         <module>front-service</module>
         <module>favorite-products-service</module>
         <module>file-storage-service</module>
+        <module>mail-sender-service</module>
     </modules>
 
     <groupId>ru.geekbrains</groupId>
