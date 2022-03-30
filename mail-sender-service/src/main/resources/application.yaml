@@ -1,0 +1,13 @@
+server:
+  port: 8160
+  servlet:
+    context-path: /mail
+mail-sender:
+      host: smtp.gmail.com
+      port: 587
+#      username: login
+#      password: password
+      protocol: smtp
+      auth: true
+      starttls-enable: true
+      debug: true
