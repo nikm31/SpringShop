@@ -5,12 +5,12 @@ import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Service;
 import ru.geekbrains.springshop.api.dto.FileMetaDto;
 import ru.geekbrains.springshop.api.dto.UserDto;
+import ru.geekbrains.springshop.filestorage.converters.FileConverter;
 import ru.geekbrains.springshop.filestorage.entity.FileMeta;
 import ru.geekbrains.springshop.filestorage.integrations.AuthServiceIntegration;
 import ru.geekbrains.springshop.filestorage.repositories.FileMetaRepository;
-import ru.geekbrains.springshop.filestorage.converters.FileConverter;
-import ru.geekbrains.springshop.filestorage.utils.HashHelper;
 import ru.geekbrains.springshop.filestorage.utils.FileSystemProvider;
+import ru.geekbrains.springshop.filestorage.utils.HashHelper;
 
 import javax.transaction.Transactional;
 import java.io.IOException;

@@ -22,22 +22,22 @@ create table products
 );
 
 insert into products (title, price, category_id, image_path)
-values ('Intel Core i7-12700KF', 35999, 1, 'img1.jpg'),
-       ('Intel Core i9-11900K', 41399, 1, 'img1.jpg'),
-       ('AMD Ryzen 9 5900X', 46999, 1, 'img1.jpg'),
-       ('Dell [370-AEVP] 64 ГБ', 61000, 2, 'img2.jpg'),
-       ('JRam [JAL1G800D2] 1 ГБ', 750, 2, 'img2.jpg'),
-       ('Intel Core i3-12100KF', 12600, 1, 'img1.jpg'),
-       ('Intel Core i5-12600K', 25000, 1, 'img1.jpg'),
-       ('Kingston [KIL1G800D2] 16 ГБ', 4500, 2, 'img2.jpg'),
-       ('Samsung [KIL1G800D2] 8 ГБ', 2500, 2, 'img2.jpg'),
-       ('JRam [JAL1G800D2] 1 ГБ', 750, 2, 'img2.jpg'),
-       ('Dell [370-AEVP] 64 ГБ', 66000, 2, 'img2.jpg'),
-       ('JRam [JAL1G800D2] 1 ГБ', 950, 2, 'img2.jpg'),
-       ('Intel Core i3-12100KF', 17600, 1, 'img1.jpg'),
-       ('Intel Core i5-12600K', 21000, 1, 'img1.jpg'),
-       ('Intel Core i7-12700KF', 38999, 1, 'img1.jpg'),
-       ('Dell [370-AEVP] 64 ГБ', 62000, 2, 'img2.jpg');
+values ('Intel Core i7-12700KF', 35999.81, 1, 'img1.jpg'),
+       ('Intel Core i9-11900K', 41399.71, 1, 'img1.jpg'),
+       ('AMD Ryzen 9 5900X', 46999.61, 1, 'img1.jpg'),
+       ('Dell [370-AEVP] 64 ГБ', 61000.51, 2, 'img2.jpg'),
+       ('JRam [JAL1G800D2] 1 ГБ', 750.41, 2, 'img2.jpg'),
+       ('Intel Core i3-12100KF', 12600.31, 1, 'img1.jpg'),
+       ('Intel Core i5-12600K', 25000.21, 1, 'img1.jpg'),
+       ('Kingston [KIL1G800D2] 16 ГБ', 4500.11, 2, 'img2.jpg'),
+       ('Samsung [KIL1G800D2] 8 ГБ', 2500.90, 2, 'img2.jpg'),
+       ('JRam [JAL1G800D2] 1 ГБ', 750.80, 2, 'img2.jpg'),
+       ('Dell [370-AEVP] 64 ГБ', 66000.70, 2, 'img2.jpg'),
+       ('JRam [JAL1G800D2] 1 ГБ', 950.50, 2, 'img2.jpg'),
+       ('Intel Core i3-12100KF', 17600.40, 1, 'img1.jpg'),
+       ('Intel Core i5-12600K', 21000.30, 1, 'img1.jpg'),
+       ('Intel Core i7-12700KF', 38999.20, 1, 'img1.jpg'),
+       ('Dell [370-AEVP] 64 ГБ', 62000.10, 2, 'img2.jpg');
 
 create table orders
 (

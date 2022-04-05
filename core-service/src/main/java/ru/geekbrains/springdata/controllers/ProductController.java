@@ -1,16 +1,21 @@
 package ru.geekbrains.springdata.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 import ru.geekbrains.springdata.converters.ProductConverter;
 import ru.geekbrains.springdata.entity.Product;
 import ru.geekbrains.springdata.services.ProductService;
-import ru.geekbrains.springdata.specifications.ProductSpecs;
+import ru.geekbrains.springshop.api.dto.PageDto;
 import ru.geekbrains.springshop.api.dto.ProductDto;
 import ru.geekbrains.springshop.api.exeptions.ResourceNotFoundException;
+import ru.geekbrains.springshop.api.exeptions.ShopError;
 
 import java.util.Optional;
 
@@ -18,13 +23,22 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v1/products")
 @RequiredArgsConstructor
+@Tag(name = "Продукты", description = "Методы работы с продуктами")
 public class ProductController {
 	private final ProductService productService;
-//	private final ImageSaverService imageSaverService;
 	private final ProductConverter productConverter;
 
+	@Operation(
+			summary = "Получение страницы продуктов с фильтрами",
+			responses = {
+					@ApiResponse(
+							description = "Успешный ответ", responseCode = "200",
+							content = @Content(schema = @Schema(implementation = PageDto.class))
+					)
+			}
+	)
 	@GetMapping
-	public Page<ProductDto> findAllWithFilters(
+	public PageDto<ProductDto> findAllWithFilters(
 			@RequestParam(value = "page") Optional<Integer> page,
 			@RequestParam(value = "pageSize") Optional<Integer> pageSize,
 			@RequestParam(value = "title", required = false) String title,
@@ -33,43 +47,63 @@ public class ProductController {
 	) {
 		final int currentPageSize = pageSize.orElse(0) < 5 ? 5 : pageSize.get();
 		final int currentPage = page.orElse(0) < 1 ? 0 : page.get() - 1;
-		Specification<Product> spec = Specification.where(null);
-		StringBuilder filter = new StringBuilder();
-		if (title != null) {
-			spec = spec.and(ProductSpecs.titleContains(title));
-			filter.append("&title=" + title);
-		}
-		if (minPrice != null) {
-			spec = spec.and(ProductSpecs.priceGreaterThanOrEq(minPrice));
-			filter.append("&minPrice=" + minPrice);
-		}
-		if (maxPrice != null) {
-			spec = spec.and(ProductSpecs.priceLesserThanOrEq(maxPrice));
-			filter.append("&maxPrice=" + minPrice);
-		}
-		return productService.getProductsWithPagingAndFiltering(currentPage, currentPageSize, spec).map(ProductConverter::entityToDto);
+
+		Page<Product> pageProduct = productService.getProductsWithPagingAndFiltering(currentPage, currentPageSize, title, minPrice, maxPrice);
+		return productConverter.pageToDto(pageProduct);
 	}
 
+	@Operation(
+			summary = "Запрос на получение продукта по id",
+			responses = {
+					@ApiResponse(
+							description = "Успешный ответ", responseCode = "200",
+							content = @Content(schema = @Schema(implementation = ProductDto.class))
+					),
+					@ApiResponse(
+							description = "Продукт не найден", responseCode = "404",
+							content = @Content(schema = @Schema(implementation = ShopError.class))
+					)
+			}
+	)
 	@GetMapping(path = "/{id}")
-	public ProductDto findById(@PathVariable Long id) {
+	public ProductDto findById(@PathVariable @Parameter(description = "ID продукта", required = true) Long id) {
 		return productConverter.entityToDto(productService.findById(id).orElseThrow(() -> new ResourceNotFoundException("Product id = " + id + " not found")));
 	}
 
-	@Secured("ADMIN")
+
+	@Operation(
+			summary = "Удаление продукта по id",
+			responses = {
+					@ApiResponse(
+							description = "Успешный ответ", responseCode = "200",
+							content = @Content(schema = @Schema(implementation = ProductDto.class))
+					),
+					@ApiResponse(
+							description = "Продукт не найден", responseCode = "404",
+							content = @Content(schema = @Schema(implementation = ResourceNotFoundException.class))
+					)
+			}
+	)
 	@DeleteMapping(path = "/{id}")
-	public ProductDto deleteById(@PathVariable Long id) {
-		ProductDto deleted = productConverter.entityToDto(productService.findById(id).orElseThrow(() -> new ResourceNotFoundException("Product id = " + id + " not found")));
+	public void deleteById(@PathVariable @Parameter(description = "ID продукта", required = true) Long id) {
 		productService.deleteById(id);
-		return deleted;
 	}
 
-	@Secured("ADMIN")
+	@Operation (
+			summary = "Изменение информации о продукте",
+			description = "метод не возвращает JSON",
+			responses = {
+					@ApiResponse(
+							description = "Успешная операция", responseCode = "200"
+					)
+			}
+	)
 	@PutMapping
-	public void changeProduct(@RequestBody ProductDto productDto) {
+	public void changeProduct(@RequestBody @Parameter(description = "Товар для удаления", required = true) ProductDto productDto) {
 		productService.updateProductFromDto(productDto);
 	}
 
-//	@Secured("ADMIN")
+
 //	@PostMapping
 //	public Product addProduct(@ModelAttribute AddNewProductForm form) {
 //		Product product = new Product();

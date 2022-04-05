@@ -1,6 +1,7 @@
 package ru.geekbrains.springshop.api.dto;
 
 public class ProductImageDto {
+
 	private String imagePath;
 
 	public String getImagePath() {

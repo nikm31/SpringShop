@@ -16,16 +16,16 @@ angular.module('store').controller('storeController', function ($scope, $http, $
         }).then(function (response) {
             console.log(response);
             $scope.productsPage = response.data;
-            $scope.paginationArray = $scope.generatePagesIndexes(1, $scope.productsPage.totalPages);
+            $scope.paginationArray = $scope.pagesIndexes(1, $scope.productsPage.totalPages);
         })
     }
 
-    $scope.generatePagesIndexes = function (startPage, endPage) {
-        let arr = [];
+    $scope.pagesIndexes = function (startPage, endPage) {
+        let pages = [];
         for (let i = startPage; i < endPage + 1; i++) {
-            arr.push(i);
+            pages.push(i);
         }
-        return arr;
+        return pages;
     }
 
     $scope.deleteProduct = function (productId) {

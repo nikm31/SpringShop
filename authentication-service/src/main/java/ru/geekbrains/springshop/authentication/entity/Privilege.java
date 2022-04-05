@@ -1,4 +1,4 @@
-package ru.geekbrains.springshop.auth.entity;
+package ru.geekbrains.springshop.authentication.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;

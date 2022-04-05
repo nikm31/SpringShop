@@ -1,16 +1,25 @@
 package ru.geekbrains.springshop.api.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import java.math.BigDecimal;
 
+@Schema(description = "Модель продукта")
 public class ProductDto {
+
+	@Schema(description = "ID продукта", required = true, example = "1")
 	private Long id;
 
+	@Schema(description = "Название продукта", required = true, maxLength = 255, minLength = 3, example = "Коробка конфет")
 	private String title;
 
+	@Schema(description = "Цена продукта", required = true, example = "800.00")
 	private BigDecimal price;
 
+	@Schema(description = "Категория продукта", required = true, example = "Процессор")
 	private String categoryTitle;
 
+	@Schema(description = "Путь к картинке продукта", example = "img1.jpg")
 	private String mainImagePath;
 
 	public Long getId() {

@@ -1,4 +1,4 @@
-package ru.geekbrains.springshop.auth.entity;
+package ru.geekbrains.springshop.authentication.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -24,6 +24,16 @@ public class Role {
 
     @ManyToMany(mappedBy = "roles")
     private Collection<User> users;
+
+    @ManyToMany
+    @JoinTable(
+            name = "roles_privileges",
+            joinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "privilege_id", referencedColumnName = "id"))
+    private Collection<Privilege> privileges;
+
 
     @CreationTimestamp
     @Column(name = "created_at")
